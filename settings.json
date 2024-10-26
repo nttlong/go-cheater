@@ -1,0 +1,9 @@
+/*create setting for golang in vscode project settings*/
+{
+    "go.buildOnSave": "auto",
+    "go.useLanguageServer": true,
+    "go.toolsEnvVars": {
+        "GO111MODULE": "on"
+    },
+    "go.gopath": "c:/go"
+}
