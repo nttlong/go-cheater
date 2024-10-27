@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 	libs "go-cheater/libs"
+	pm "go-cheater/libs/process_manager"
 )
 
 func main() {
+	pm.NewProcessManager()
 	processList, err := libs.GetProcessList()
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -17,7 +19,7 @@ func main() {
 	}
 	pid, found := libs.FindProcessByName(
 		processList,
-		"eldenring.ex",
+		"eldenring.exe",
 	)
 	if !found {
 		fmt.Println("Error: Process not found")
